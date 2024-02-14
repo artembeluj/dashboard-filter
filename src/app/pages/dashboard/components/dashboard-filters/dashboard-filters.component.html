@@ -1,0 +1,15 @@
+<form [formGroup]="filterForm" class="form">
+    <app-input formControlName="name" [label]="'Name'"></app-input>
+    <app-dropdown formControlName="category" [label]="'Category'"></app-dropdown>
+    <div class="price-range">
+        <span>Min: {{ filterForm.get('priceRange.minPrice')?.value }}</span>
+        <mat-slider id="priceRange" formGroupName="priceRange" [min]="getMinPrice()" [max]="getMaxPrice()" [step]="10"
+            thumbLabel tickInterval="10">
+            <input formControlName="minPrice" matSliderStartThumb>
+            <input formControlName="maxPrice" matSliderEndThumb>
+        </mat-slider>
+        <span>Max: {{ filterForm.get('priceRange.maxPrice')?.value }}</span>
+    </div>
+</form>
+
+<app-dashboard-table></app-dashboard-table>

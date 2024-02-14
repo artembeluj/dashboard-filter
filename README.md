@@ -1,27 +1,38 @@
-# DashboardFilter
+Angular Project Documentation
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
+Project Structure
+The project is organized into the following main directories:
 
-## Development server
+1. core
+This directory houses essential services for the application.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2. pages
+The pages directory contains the primary application pages. Currently, it includes:
 
-## Code scaffolding
+a. dashboard
+The dashboard page is composed of two main components:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- dashboard-filters
+This component is responsible for rendering and managing the filters on the dashboard. The filters include options for name, category, and price range. The name and category filters are implemented using custom value accessors for better code organization.
 
-## Build
+Unit Tests:
+Unit tests for this component are available to ensure the correct functionality of the filters.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- dashboard-table
+The dashboard-table component is responsible for displaying data in a tabular format. It receives data and renders it using Angular Material components, providing a visually appealing and user-friendly table.
 
-## Running unit tests
+3. shared
+The shared directory holds common interfaces and constants used throughout the application.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Architecture and Performance
+The application follows the stand-alone architecture, emphasizing modularity and separation of concerns.
 
-## Running end-to-end tests
+ChangeDetectionStrategy.OnPush has been applied to optimize performance by reducing unnecessary change detection cycles.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Running the Project
+To run the project, execute the following command: ng serve
 
-## Further help
+This will start the development server, and you can access the application at http://localhost:4200/.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Testing
+The application has been thoroughly tested using Angular DevTools. Additionally, unit tests have been implemented for components, including the dashboard-filters component.

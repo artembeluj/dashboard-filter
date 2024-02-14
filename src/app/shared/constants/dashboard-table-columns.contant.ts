@@ -1,0 +1,1 @@
+export const DASHBOARD_TABLE_COLUMNS: string[] = ['ID', 'name', 'category', 'price', 'year'];
